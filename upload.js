@@ -42,14 +42,21 @@ const fs = require('fs');
     viewport: { width: 1920, height: 1080 }
   });
   
-  // Validate and fix cookies sameSite
+  // Validate and fix cookies for Playwright compatibility
   const validSameSite = ['Strict', 'Lax', 'None'];
+  const allowedFields = ['name', 'value', 'domain', 'path', 'expires', 'httpOnly', 'secure', 'sameSite'];
   const fixedCookies = cookies.map(c => {
+    // Fix sameSite
     if (c.sameSite && !validSameSite.includes(c.sameSite)) {
       console.log(`⚠️ Fixing cookie "${c.name}": sameSite "${c.sameSite}" → "Lax"`);
-      return { ...c, sameSite: 'Lax' };
+      c = { ...c, sameSite: 'Lax' };
     }
-    return c;
+    // Strip invalid fields (partitionKey, storeId, etc.)
+    const clean = {};
+    for (const f of allowedFields) {
+      if (c[f] !== undefined) clean[f] = c[f];
+    }
+    return clean;
   });
   
   // Add cookies
