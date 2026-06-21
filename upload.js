@@ -45,19 +45,29 @@ const fs = require('fs');
   // Validate and fix cookies for Playwright compatibility
   const validSameSite = ['Strict', 'Lax', 'None'];
   const allowedFields = ['name', 'value', 'domain', 'path', 'expires', 'httpOnly', 'secure', 'sameSite'];
-  const fixedCookies = cookies.map(c => {
-    // Fix sameSite
-    if (c.sameSite && !validSameSite.includes(c.sameSite)) {
-      console.log(`⚠️ Fixing cookie "${c.name}": sameSite "${c.sameSite}" → "Lax"`);
-      c = { ...c, sameSite: 'Lax' };
+  const fixedCookies = [];
+  for (const c of cookies) {
+    // Normalize sameSite (case-insensitive)
+    let ss = c.sameSite;
+    if (ss) {
+      const ssLower = String(ss).toLowerCase();
+      if (ssLower === 'strict') ss = 'Strict';
+      else if (ssLower === 'lax') ss = 'Lax';
+      else if (ssLower === 'none') ss = 'None';
+      else {
+        console.log(`⚠️ Fixing cookie "${c.name}": sameSite "${ss}" → "Lax"`);
+        ss = 'Lax';
+      }
     }
-    // Strip invalid fields (partitionKey, storeId, etc.)
+    // Strip invalid fields, only keep Playwright-compatible ones
     const clean = {};
     for (const f of allowedFields) {
+      if (f === 'sameSite' && ss) { clean[f] = ss; continue; }
+      if (f === 'sameSite') continue;
       if (c[f] !== undefined) clean[f] = c[f];
     }
-    return clean;
-  });
+    fixedCookies.push(clean);
+  }
   
   // Add cookies
   await context.addCookies(fixedCookies);
