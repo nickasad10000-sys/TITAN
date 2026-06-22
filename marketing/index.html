@@ -3,41 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mustika Lembayung — Marketing Plan Jun 2026</title>
+<title>Mustika Lembayung — Marketing Plan</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;510;590;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
 :root {
-  --gold: #D4A843;
-  --gold-light: #F0D68A;
-  --gold-dark: #B8860B;
-  --dark: #0D1117;
-  --dark-card: #161B22;
-  --dark-hover: #1C2333;
-  --text: #E6EDF3;
-  --text-muted: #8B949E;
-  --green: #3FB950;
-  --red: #F85149;
-  --yellow: #D29922;
-  --blue: #58A6FF;
-  --purple: #BC8CFF;
-  --border: #30363D;
+  --bg-primary: #08090a;
+  --bg-panel: #0f1011;
+  --bg-surface: #191a1b;
+  --bg-elevated: #28282c;
+  --text-primary: #f7f8f8;
+  --text-secondary: #d0d6e0;
+  --text-tertiary: #8a8f98;
+  --text-muted: #62666d;
+  --brand: #D4A843;
+  --brand-hover: #E8C45A;
+  --brand-dark: #B8860B;
+  --green: #10b981;
+  --red: #e74c3c;
+  --yellow: #f39c12;
+  --blue: #5dade2;
+  --border: rgba(255,255,255,0.08);
+  --border-subtle: rgba(255,255,255,0.05);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: var(--dark);
-  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
   line-height: 1.6;
+  font-feature-settings: "cv01", "ss03";
   -webkit-font-smoothing: antialiased;
 }
 
-/* ═══ HEADER ═══ */
+/* HEADER */
 .header {
-  background: linear-gradient(135deg, #0D1117 0%, #161B22 50%, #1C2333 100%);
-  border-bottom: 1px solid var(--border);
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border-subtle);
   padding: 0;
   position: sticky;
   top: 0;
@@ -46,9 +49,9 @@ body {
 }
 
 .header-inner {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 16px 24px;
+  padding: 14px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -57,138 +60,137 @@ body {
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
-.logo-icon {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-  border-radius: 10px;
+.logo-mark {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
-  font-weight: 800;
-  color: var(--dark);
-}
-
-.logo-text h1 {
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 700;
-  color: var(--text);
-  letter-spacing: -0.3px;
+  color: var(--bg-primary);
 }
 
-.logo-text span {
+.logo-text {
+  font-size: 15px;
+  font-weight: 590;
+  color: var(--text-primary);
+  letter-spacing: -0.2px;
+}
+
+.logo-sub {
   font-size: 11px;
-  color: var(--text-muted);
+  color: var(--text-tertiary);
   font-weight: 400;
 }
 
-.header-badge {
-  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-  color: var(--dark);
-  padding: 6px 14px;
-  border-radius: 20px;
+.header-cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.badge {
+  padding: 5px 12px;
+  border-radius: 9999px;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 510;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
 }
 
-/* ═══ CONTAINER ═══ */
+.badge-accent {
+  background: rgba(212, 168, 67, 0.1);
+  border-color: rgba(212, 168, 67, 0.3);
+  color: var(--brand);
+}
+
+/* CONTAINER */
 .container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 32px 24px;
 }
 
-/* ═══ KPI CARDS ═══ */
+/* KPI */
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  margin-bottom: 24px;
+  gap: 12px;
+  margin-bottom: 32px;
 }
 
-.kpi-card {
-  background: var(--dark-card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
+.kpi {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
   padding: 20px;
   position: relative;
-  overflow: hidden;
-  transition: all 0.2s;
 }
 
-.kpi-card:hover {
-  border-color: var(--gold);
-  transform: translateY(-2px);
-}
-
-.kpi-card::before {
+.kpi::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+  height: 2px;
+  background: linear-gradient(90deg, var(--brand), var(--brand-dark));
+  border-radius: 8px 8px 0 0;
 }
 
-.kpi-card.warning::before { background: linear-gradient(90deg, var(--yellow), #B8860B); }
-.kpi-card.danger::before { background: linear-gradient(90deg, var(--red), #C0392B); }
-.kpi-card.success::before { background: linear-gradient(90deg, var(--green), #27AE60); }
+.kpi.danger::before { background: linear-gradient(90deg, var(--red), #c0392b); }
+.kpi.success::before { background: linear-gradient(90deg, var(--green), #27ae60); }
+.kpi.warning::before { background: linear-gradient(90deg, var(--yellow), #e67e22); }
 
 .kpi-value {
-  font-size: 32px;
-  font-weight: 800;
-  color: var(--gold);
+  font-size: 36px;
+  font-weight: 590;
+  color: var(--brand);
   letter-spacing: -1px;
   line-height: 1.1;
 }
 
-.kpi-card.warning .kpi-value { color: var(--yellow); }
-.kpi-card.danger .kpi-value { color: var(--red); }
-.kpi-card.success .kpi-value { color: var(--green); }
+.kpi.danger .kpi-value { color: var(--red); }
+.kpi.success .kpi-value { color: var(--green); }
+.kpi.warning .kpi-value { color: var(--yellow); }
 
 .kpi-label {
   font-size: 13px;
-  color: var(--text-muted);
+  color: var(--text-tertiary);
   margin-top: 4px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
-.kpi-sub {
-  font-size: 11px;
-  color: var(--text-muted);
-  margin-top: 8px;
-}
-
-.progress-bar {
-  height: 4px;
-  background: var(--border);
+.kpi-bar {
+  height: 3px;
+  background: var(--border-subtle);
   border-radius: 2px;
   margin-top: 12px;
   overflow: hidden;
 }
 
-.progress-fill {
-  height: 4px;
+.kpi-bar-fill {
+  height: 3px;
   border-radius: 2px;
-  background: linear-gradient(90deg, var(--gold), var(--gold-light));
-  transition: width 0.5s ease;
+  background: linear-gradient(90deg, var(--brand), var(--brand-hover));
 }
 
-.kpi-card.warning .progress-fill { background: linear-gradient(90deg, var(--yellow), #F0D68A); }
-.kpi-card.danger .progress-fill { background: linear-gradient(90deg, var(--red), #FF6B6B); }
+.kpi.danger .kpi-bar-fill { background: linear-gradient(90deg, var(--red), #ff6b6b); }
+.kpi.warning .kpi-bar-fill { background: linear-gradient(90deg, var(--yellow), #f0d68a); }
 
-/* ═══ SECTION ═══ */
+/* SECTION */
 .section {
-  background: var(--dark-card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
   padding: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .section-header {
@@ -197,192 +199,188 @@ body {
   gap: 10px;
   margin-bottom: 20px;
   padding-bottom: 16px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .section-icon {
-  width: 36px;
-  height: 36px;
-  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-  border-radius: 8px;
+  width: 28px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .section-title {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--text);
+  font-size: 16px;
+  font-weight: 590;
+  color: var(--text-primary);
+  letter-spacing: -0.2px;
 }
 
-.section-subtitle {
+.section-sub {
   font-size: 12px;
-  color: var(--text-muted);
-  margin-top: 2px;
-}
-
-/* ═══ CONTENT LIST ═══ */
-.content-list {
-  list-style: none;
-}
-
-.content-list li {
-  padding: 12px 16px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  margin-bottom: 8px;
-  font-size: 14px;
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  transition: all 0.2s;
-  background: var(--dark);
-}
-
-.content-list li:hover {
-  border-color: var(--gold);
-  background: var(--dark-hover);
-}
-
-.content-list li .num {
-  width: 24px;
-  height: 24px;
-  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--dark);
-  flex-shrink: 0;
+  color: var(--text-tertiary);
   margin-top: 1px;
 }
 
-.content-list li .text {
-  flex: 1;
-  line-height: 1.5;
-}
-
-.batch-header {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--gold);
-  margin: 20px 0 12px;
+/* BATCH */
+.batch-label {
+  font-size: 11px;
+  font-weight: 510;
+  color: var(--brand);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: 20px 0 10px;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.batch-header::after {
+.batch-label::after {
   content: '';
   flex: 1;
   height: 1px;
-  background: var(--border);
+  background: var(--border-subtle);
 }
 
-/* ═══ TCO TABLE ═══ */
+/* CONTENT LIST */
+.content-list {
+  list-style: none;
+}
+
+.content-list li {
+  padding: 12px 14px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: rgba(255,255,255,0.01);
+  transition: all 0.15s;
+}
+
+.content-list li:hover {
+  border-color: var(--border);
+  background: rgba(255,255,255,0.02);
+}
+
+.num {
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--bg-primary);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* TCO TABLE */
 .tco-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 14px;
+  font-size: 13px;
   margin: 16px 0;
 }
 
 .tco-table th {
-  background: var(--dark-hover);
-  color: var(--gold);
-  padding: 12px 16px;
+  background: var(--bg-surface);
+  color: var(--brand);
+  padding: 10px 14px;
   text-align: left;
-  font-weight: 600;
-  font-size: 12px;
+  font-weight: 510;
+  font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  border-bottom: 2px solid var(--border);
-}
-
-.tco-table td {
-  padding: 12px 16px;
   border-bottom: 1px solid var(--border);
 }
 
+.tco-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+}
+
 .tco-table tr:hover td {
-  background: var(--dark-hover);
+  background: rgba(255,255,255,0.01);
 }
 
 .tco-table .highlight {
   color: var(--green);
-  font-weight: 600;
+  font-weight: 510;
 }
 
 .tco-table .danger {
   color: var(--red);
 }
 
-.tco-total {
-  background: var(--dark-hover) !important;
-  font-weight: 700;
+.tco-total td {
+  background: var(--bg-surface);
+  font-weight: 590;
+  color: var(--text-primary);
 }
 
-/* ═══ METHOD CARDS ═══ */
+.tco-note {
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--green);
+}
+
+/* METHOD CARDS */
 .method-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 12px;
   margin-top: 16px;
 }
 
-.method-card {
-  background: var(--dark);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 20px;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.2s;
+.method {
+  background: rgba(255,255,255,0.01);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 18px;
+  transition: all 0.15s;
 }
 
-.method-card:hover {
-  border-color: var(--gold);
-  transform: translateY(-2px);
+.method:hover {
+  border-color: var(--border);
+  background: rgba(255,255,255,0.02);
 }
 
-.method-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-}
-
-.method-card:nth-child(1)::before { background: linear-gradient(90deg, var(--gold), var(--gold-dark)); }
-.method-card:nth-child(2)::before { background: linear-gradient(90deg, var(--yellow), #B8860B); }
-.method-card:nth-child(3)::before { background: linear-gradient(90deg, var(--blue), #2980B9); }
-
-.method-number {
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--gold);
+.method-num {
+  font-size: 10px;
+  font-weight: 510;
+  color: var(--brand);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   margin-bottom: 8px;
 }
 
 .method-title {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 590;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  letter-spacing: -0.2px;
 }
 
 .method-desc {
-  font-size: 13px;
-  color: var(--text-muted);
+  font-size: 12px;
+  color: var(--text-tertiary);
   line-height: 1.5;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .method-list {
@@ -392,8 +390,8 @@ body {
 }
 
 .method-list li {
-  padding: 4px 0;
-  padding-left: 16px;
+  padding: 3px 0;
+  padding-left: 14px;
   position: relative;
 }
 
@@ -401,148 +399,154 @@ body {
   content: '→';
   position: absolute;
   left: 0;
-  color: var(--gold);
+  color: var(--brand);
+  font-size: 11px;
 }
 
-/* ═══ CALENDAR ═══ */
-.calendar-table {
+/* CALENDAR */
+.cal-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 13px;
 }
 
-.calendar-table th {
-  background: var(--dark-hover);
-  color: var(--gold);
-  padding: 10px 14px;
+.cal-table th {
+  background: var(--bg-surface);
+  color: var(--text-tertiary);
+  padding: 8px 12px;
   text-align: left;
-  font-weight: 600;
+  font-weight: 510;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-}
-
-.calendar-table td {
-  padding: 10px 14px;
   border-bottom: 1px solid var(--border);
 }
 
-.calendar-table tr:hover td {
-  background: var(--dark-hover);
+.cal-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+}
+
+.cal-table tr:hover td {
+  background: rgba(255,255,255,0.01);
 }
 
 .tag {
   display: inline-block;
-  padding: 3px 10px;
-  border-radius: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 510;
 }
 
-.tag-ready { background: rgba(63, 185, 80, 0.15); color: var(--green); border: 1px solid rgba(63, 185, 80, 0.3); }
-.tag-blocked { background: rgba(248, 81, 73, 0.15); color: var(--red); border: 1px solid rgba(248, 81, 73, 0.3); }
-.tag-planned { background: rgba(88, 166, 255, 0.15); color: var(--blue); border: 1px solid rgba(88, 166, 255, 0.3); }
+.tag-ready { background: rgba(16,185,129,0.1); color: var(--green); border: 1px solid rgba(16,185,129,0.25); }
+.tag-blocked { background: rgba(231,76,60,0.1); color: var(--red); border: 1px solid rgba(231,76,60,0.25); }
+.tag-planned { background: rgba(93,173,226,0.1); color: var(--blue); border: 1px solid rgba(93,173,226,0.25); }
 
-/* ═══ CHECKLIST ═══ */
+/* CHECKLIST */
 .checklist {
   list-style: none;
 }
 
 .checklist li {
-  padding: 10px 14px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  margin-bottom: 6px;
+  padding: 10px 12px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  margin-bottom: 4px;
   font-size: 13px;
+  color: var(--text-secondary);
   display: flex;
   align-items: center;
   gap: 10px;
-  background: var(--dark);
-  transition: all 0.2s;
+  background: rgba(255,255,255,0.01);
+  cursor: pointer;
+  transition: all 0.15s;
 }
 
 .checklist li:hover {
-  border-color: var(--gold);
+  border-color: var(--border);
 }
 
 .checklist input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  accent-color: var(--gold);
+  width: 16px;
+  height: 16px;
+  accent-color: var(--brand);
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .checklist li.checked {
-  opacity: 0.5;
+  opacity: 0.4;
   text-decoration: line-through;
 }
 
-/* ═══ UNITS ═══ */
+/* UNITS */
 .unit-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  gap: 10px;
   margin-top: 16px;
 }
 
-.unit-card {
-  background: var(--dark);
-  border: 1px solid var(--border);
-  border-radius: 10px;
+.unit {
+  background: rgba(255,255,255,0.01);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
   padding: 16px;
   text-align: center;
-  transition: all 0.2s;
+  transition: all 0.15s;
 }
 
-.unit-card:hover {
+.unit:hover {
   border-color: var(--green);
 }
 
 .unit-icon {
-  font-size: 28px;
-  margin-bottom: 8px;
+  font-size: 24px;
+  margin-bottom: 6px;
 }
 
 .unit-name {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text);
+  font-size: 13px;
+  font-weight: 510;
+  color: var(--text-primary);
 }
 
 .unit-loc {
-  font-size: 12px;
-  color: var(--text-muted);
-  margin-top: 4px;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  margin-top: 2px;
 }
 
 .unit-status {
   display: inline-block;
-  margin-top: 10px;
-  padding: 4px 12px;
-  border-radius: 12px;
+  margin-top: 8px;
+  padding: 3px 10px;
+  border-radius: 4px;
   font-size: 11px;
-  font-weight: 600;
-  background: rgba(63, 185, 80, 0.15);
+  font-weight: 510;
+  background: rgba(16,185,129,0.1);
   color: var(--green);
-  border: 1px solid rgba(63, 185, 80, 0.3);
+  border: 1px solid rgba(16,185,129,0.25);
 }
 
-/* ═══ FOOTER ═══ */
+/* FOOTER */
 .footer {
   text-align: center;
   padding: 24px;
   color: var(--text-muted);
   font-size: 12px;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border-subtle);
   margin-top: 24px;
 }
 
-/* ═══ RESPONSIVE ═══ */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .kpi-grid { grid-template-columns: repeat(2, 1fr); }
   .method-grid { grid-template-columns: 1fr; }
   .unit-grid { grid-template-columns: 1fr; }
-  .container { padding: 16px; }
+  .container { padding: 20px 16px; }
   .header-inner { padding: 12px 16px; }
 }
 
@@ -553,172 +557,131 @@ body {
 </head>
 <body>
 
-<!-- HEADER -->
 <div class="header">
   <div class="header-inner">
     <div class="logo">
-      <div class="logo-icon">ML</div>
-      <div class="logo-text">
-        <h1>Mustika Lembayung</h1>
-        <span>Marketing Plan — Juni 2026</span>
+      <div class="logo-mark">ML</div>
+      <div>
+        <div class="logo-text">Mustika Lembayung</div>
+        <div class="logo-sub">Marketing Plan — Juni 2026</div>
       </div>
     </div>
-    <div class="header-badge">🎯 Target: 3 Unit</div>
+    <div class="header-cta">
+      <span class="badge badge-accent">🎯 Target: 3 Unit</span>
+    </div>
   </div>
 </div>
 
 <div class="container">
 
-<!-- KPI DASHBOARD -->
+<!-- KPI -->
 <div class="kpi-grid">
-  <div class="kpi-card">
+  <div class="kpi">
     <div class="kpi-value">7/20</div>
     <div class="kpi-label">Konten Terbuat</div>
-    <div class="kpi-sub">35% dari target bulanan</div>
-    <div class="progress-bar"><div class="progress-fill" style="width:35%"></div></div>
+    <div class="kpi-bar"><div class="kpi-bar-fill" style="width:35%"></div></div>
   </div>
-  <div class="kpi-card danger">
+  <div class="kpi danger">
     <div class="kpi-value">13</div>
     <div class="kpi-label">Konten Belum</div>
-    <div class="kpi-sub">Deadline: 30 Juni 2026</div>
-    <div class="progress-bar"><div class="progress-fill" style="width:65%"></div></div>
+    <div class="kpi-bar"><div class="kpi-bar-fill" style="width:65%"></div></div>
   </div>
-  <div class="kpi-card success">
+  <div class="kpi success">
     <div class="kpi-value">3</div>
     <div class="kpi-label">Target Closing</div>
-    <div class="kpi-sub">Unit siap huni</div>
-    <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    <div class="kpi-bar"><div class="kpi-bar-fill" style="width:100%"></div></div>
   </div>
-  <div class="kpi-card warning">
+  <div class="kpi warning">
     <div class="kpi-value">18%</div>
     <div class="kpi-label">Implementasi KPI</div>
-    <div class="kpi-sub">dari 100% target</div>
-    <div class="progress-bar"><div class="progress-fill" style="width:18%"></div></div>
+    <div class="kpi-bar"><div class="kpi-bar-fill" style="width:18%"></div></div>
   </div>
 </div>
 
-<!-- KONTEN BELUM -->
+<!-- KONTEN -->
 <div class="section">
   <div class="section-header">
     <div class="section-icon">🎬</div>
     <div>
       <div class="section-title">13 Konten Belum — Rencana Shooting</div>
-      <div class="section-subtitle">Target selesai editing: 30 Juni 2026</div>
+      <div class="section-sub">Target selesai editing: 30 Juni 2026</div>
     </div>
   </div>
 
-  <div class="batch-header">Batch 1: Lokasi & Akses</div>
+  <div class="batch-label">Batch 1 — Lokasi & Akses</div>
   <ul class="content-list">
-    <li><span class="num">1</span><span class="text">Shoot jalan ke Mustika Lembayung Sumbersuko</span></li>
-    <li><span class="num">2</span><span class="text">Lokasi ML ke tempat terkenal (Puskesmas, Tempat Wisata, Kantor Keamanan)</span></li>
-    <li><span class="num">3</span><span class="text">Mengapa harus ML? — Lokasi real padat pemukiman, akses jalan beraspal, tanpa gimmick. Komen: "Spill lokasinya"</span></li>
-    <li><span class="num">4</span><span class="text">Mengapa harus ML? — Keunggulan kawasan Marketing Gallery</span></li>
-    <li><span class="num">5</span><span class="text">Konten konsep open space di Mustika Lembayung</span></li>
+    <li><span class="num">1</span>Shoot jalan ke Mustika Lembayung Sumbersuko</li>
+    <li><span class="num">2</span>Lokasi ML ke tempat terkenal (Puskesmas, Wisata, Kantor Keamanan)</li>
+    <li><span class="num">3</span>Mengapa ML? — Lokasi real padat pemukiman, akses jalan beraspal. Komen: "Spill lokasinya"</li>
+    <li><span class="num">4</span>Mengapa ML? — Keunggulan kawasan Marketing Gallery</li>
+    <li><span class="num">5</span>Konten konsep open space di Mustika Lembayung</li>
   </ul>
 
-  <div class="batch-header">Batch 2: Interior & Edukasi</div>
+  <div class="batch-label">Batch 2 — Interior & Edukasi</div>
   <ul class="content-list">
-    <li><span class="num">6</span><span class="text">Open space → komen negatif "Kaya kelihatan sumpek", "Gak ada privasi" → jawab dengan video mengapa open space diminati + opsi taman jadi ruang tamu outdoor (beri referensi)</span></li>
-    <li><span class="num">7</span><span class="text">Spill material pembangunan (Bata ringan, merk cat, cat pelapis)</span></li>
-    <li><span class="num">8</span><span class="text">Rumah subsidi rata-rata tinggi 2.8-3m vs ML 4 meter</span></li>
-    <li><span class="num">9</span><span class="text">Drop ceiling atap + Meja ala bar</span></li>
+    <li><span class="num">6</span>Open space → komen negatif "Sumpek, gak ada privasi" → jawab: open space diminati + taman = ruang tamu outdoor</li>
+    <li><span class="num">7</span>Spill material (Bata ringan, merk cat, cat pelapis)</li>
+    <li><span class="num">8</span>Rumah subsidi rata-rata 2.8-3m vs ML 4 meter</li>
+    <li><span class="num">9</span>Drop ceiling atap + Meja ala bar</li>
   </ul>
 
-  <div class="batch-header">Batch 3: Testimoni & Spesifikasi</div>
+  <div class="batch-label">Batch 3 — Testimoni & Spesifikasi</div>
   <ul class="content-list">
-    <li><span class="num">10</span><span class="text">Tukang/Pemborong (Selo) bahas kualitas bangunan ML</span></li>
-    <li><span class="num">11</span><span class="text">Komen negatif "Dinding pakai bata ringan, pasti gak awet" → jawab kelebihan bata ringan + highlight rumah komersial kota besar juga pakai</span></li>
-    <li><span class="num">12</span><span class="text">Kedalaman septictank</span></li>
-    <li><span class="num">13</span><span class="text">Akses jalan di lokasi perumahan + Pengawasan struktur bangunan</span></li>
+    <li><span class="num">10</span>Tukang/Pemborong (Selo) bahas kualitas bangunan ML</li>
+    <li><span class="num">11</span>Komen negatif "Bata ringan gak awet" → jawab kelebihan + highlight rumah komersial juga pakai</li>
+    <li><span class="num">12</span>Kedalaman septictank</li>
+    <li><span class="num">13</span>Akses jalan + Pengawasan struktur bangunan di ML</li>
   </ul>
 </div>
 
-<!-- TEMPLATE TCO -->
+<!-- TCO -->
 <div class="section">
   <div class="section-header">
     <div class="section-icon">💰</div>
     <div>
       <div class="section-title">Template TCO — Total Cost of Ownership</div>
-      <div class="section-subtitle">Pakai saat konsumen bilang "Kompetitor lebih murah"</div>
+      <div class="section-sub">Pakai saat konsumen bilang "Kompetitor lebih murah"</div>
     </div>
   </div>
 
   <table class="tco-table">
-    <tr>
-      <th>Komponen</th>
-      <th>Kompetitor X</th>
-      <th>Mustika Lembayung</th>
-    </tr>
-    <tr>
-      <td>Harga rumah (brochure)</td>
-      <td>Rp 150.000.000</td>
-      <td>Rp 165.000.000</td>
-    </tr>
-    <tr>
-      <td>Dapur (belum ada)</td>
-      <td class="danger">+ Rp 15.000.000</td>
-      <td class="highlight">✅ Sudah ada</td>
-    </tr>
-    <tr>
-      <td>Tembok pembatas kamar</td>
-      <td class="danger">+ Rp 8.000.000</td>
-      <td class="highlight">✅ Sudah ada</td>
-    </tr>
-    <tr>
-      <td>Cat dasar</td>
-      <td class="danger">+ Rp 5.000.000</td>
-      <td class="highlight">✅ Sudah di-cat</td>
-    </tr>
-    <tr>
-      <td>Plafon drop ceiling</td>
-      <td class="danger">+ Rp 7.000.000</td>
-      <td class="highlight">✅ Sudah ada</td>
-    </tr>
-    <tr>
-      <td>Meja dapur/ala bar</td>
-      <td class="danger">+ Rp 3.000.000</td>
-      <td class="highlight">✅ Sudah ada</td>
-    </tr>
-    <tr>
-      <td>Taman depan</td>
-      <td class="danger">+ Rp 5.000.000</td>
-      <td class="highlight">✅ Sudah ada</td>
-    </tr>
-    <tr class="tco-total">
-      <td><strong>TOTAL BIAYA SIAP HUNI</strong></td>
-      <td class="danger"><strong>Rp 193.000.000</strong></td>
-      <td class="highlight"><strong>Rp 165.000.000</strong></td>
-    </tr>
+    <tr><th>Komponen</th><th>Kompetitor X</th><th>Mustika Lembayung</th></tr>
+    <tr><td>Harga rumah (brochure)</td><td>Rp 150.000.000</td><td>Rp 165.000.000</td></tr>
+    <tr><td>Dapur (belum ada)</td><td class="danger">+ 15jt</td><td class="highlight">✅ Ada</td></tr>
+    <tr><td>Tembok pembatas</td><td class="danger">+ 8jt</td><td class="highlight">✅ Ada</td></tr>
+    <tr><td>Cat dasar</td><td class="danger">+ 5jt</td><td class="highlight">✅ Ada</td></tr>
+    <tr><td>Drop ceiling</td><td class="danger">+ 7jt</td><td class="highlight">✅ Ada</td></tr>
+    <tr><td>Meja dapur</td><td class="danger">+ 3jt</td><td class="highlight">✅ Ada</td></tr>
+    <tr><td>Taman</td><td class="danger">+ 5jt</td><td class="highlight">✅ Ada</td></tr>
+    <tr class="tco-total"><td><strong>TOTAL SIAP HUNI</strong></td><td class="danger"><strong>Rp 193.000.000</strong></td><td class="highlight"><strong>Rp 165.000.000</strong></td></tr>
   </table>
 
-  <div style="background:rgba(63,185,80,0.1);border:1px solid rgba(63,185,80,0.3);border-radius:8px;padding:12px 16px;margin-top:16px">
-    <strong style="color:var(--green)">💡 Hemat Rp 28.000.000</strong> + Langsung huni + Tanpa repot urus tukang
-  </div>
+  <div class="tco-note">💡 Hemat <strong>Rp 28.000.000</strong> + Langsung huni + Tanpa repot urus tukang</div>
 </div>
 
-<!-- METODE PENJUALAN -->
+<!-- METODE -->
 <div class="section">
   <div class="section-header">
     <div class="section-icon">🎯</div>
     <div>
       <div class="section-title">3 Metode Penjualan "Memaksa"</div>
-      <div class="section-subtitle">Teknik closing untuk konsumen yang ragu</div>
+      <div class="section-sub">Teknik closing untuk konsumen yang ragu</div>
     </div>
   </div>
 
   <div class="method-grid">
-    <div class="method-card">
-      <div class="method-number">Metode 1</div>
+    <div class="method">
+      <div class="method-num">Metode 1</div>
       <div class="method-title">Total Utility & TCO</div>
       <div class="method-desc">Jual "Biaya Total Siap Huni", bukan harga rumah.</div>
       <ul class="method-list">
-        <li>Edukasi: harga murah = Hidden Cost</li>
+        <li>Harga murah = Hidden Cost</li>
         <li>Tanpa dapur & tembok = CapEx tambahan</li>
         <li>Ubah perbandingan jadi angka riil</li>
       </ul>
     </div>
-    <div class="method-card">
-      <div class="method-number">Metode 2</div>
+    <div class="method">
+      <div class="method-num">Metode 2</div>
       <div class="method-title">Scarcity & FOMO</div>
       <div class="method-desc">Ciptakan kelangkaan berbasis regulasi kuota pemerintah.</div>
       <ul class="method-list">
@@ -727,8 +690,8 @@ body {
         <li>Tunda = kehilangan hak subsidi</li>
       </ul>
     </div>
-    <div class="method-card">
-      <div class="method-number">Metode 3</div>
+    <div class="method">
+      <div class="method-num">Metode 3</div>
       <div class="method-title">Menghilangkan Kekhawatiran</div>
       <div class="method-desc">Hilangkan ketakutan: KPR ditolak & administrasi rumit.</div>
       <ul class="method-list">
@@ -746,57 +709,20 @@ body {
     <div class="section-icon">📅</div>
     <div>
       <div class="section-title">Kalender Implementasi</div>
-      <div class="section-subtitle">24 — 30 Juni 2026</div>
+      <div class="section-sub">24 — 30 Juni 2026</div>
     </div>
   </div>
 
-  <table class="calendar-table">
-    <tr>
-      <th>Tanggal</th>
-      <th>Aktivitas</th>
-      <th>PIC</th>
-      <th>Status</th>
-    </tr>
-    <tr>
-      <td>24 Jun</td>
-      <td>Live Streaming "Mulai aja dulu" (ref: Lab Persada)</td>
-      <td>Rizza/Mada</td>
-      <td><span class="tag tag-ready">Ready</span></td></tr>
-    <tr>
-      <td>24 Jun</td>
-      <td>Follow up user survey lokasi</td>
-      <td>Mada</td>
-      <td><span class="tag tag-ready">Ready</span></td></tr>
-    <tr>
-      <td>24 Jun</td>
-      <td>Canvassing pabrik (need creative producer)</td>
-      <td>Rizza</td>
-      <td><span class="tag tag-blocked">Blocked</span></td></tr>
-    <tr>
-      <td>25 Jun</td>
-      <td>Shoot Batch 1 — Lokasi & Akses</td>
-      <td>-</td>
-      <td><span class="tag tag-planned">Planned</span></td></tr>
-    <tr>
-      <td>26 Jun</td>
-      <td>Shoot Batch 2 — Interior & Edukasi</td>
-      <td>-</td>
-      <td><span class="tag tag-planned">Planned</span></td></tr>
-    <tr>
-      <td>27 Jun</td>
-      <td>Penambahan contact person di Linktree</td>
-      <td>Rizza</td>
-      <td><span class="tag tag-planned">Planned</span></td></tr>
-    <tr>
-      <td>28 Jun</td>
-      <td>Shoot Batch 3 — Testimoni & Spesifikasi</td>
-      <td>-</td>
-      <td><span class="tag tag-planned">Planned</span></td></tr>
-    <tr>
-      <td>29-30 Jun</td>
-      <td>Editing & finalisasi semua konten</td>
-      <td>-</td>
-      <td><span class="tag tag-planned">Planned</span></td></tr>
+  <table class="cal-table">
+    <tr><th>Tanggal</th><th>Aktivitas</th><th>PIC</th><th>Status</th></tr>
+    <tr><td>24 Jun</td><td>Live Streaming "Mulai aja dulu"</td><td>Rizza/Mada</td><td><span class="tag tag-ready">Ready</span></td></tr>
+    <tr><td>24 Jun</td><td>Follow up user survey</td><td>Mada</td><td><span class="tag tag-ready">Ready</span></td></tr>
+    <tr><td>24 Jun</td><td>Canvassing pabrik</td><td>Rizza</td><td><span class="tag tag-blocked">Blocked</span></td></tr>
+    <tr><td>25 Jun</td><td>Shoot Batch 1 — Lokasi</td><td>-</td><td><span class="tag tag-planned">Planned</span></td></tr>
+    <tr><td>26 Jun</td><td>Shoot Batch 2 — Interior</td><td>-</td><td><span class="tag tag-planned">Planned</span></td></tr>
+    <tr><td>27 Jun</td><td>Contact person di Linktree</td><td>Rizza</td><td><span class="tag tag-planned">Planned</span></td></tr>
+    <tr><td>28 Jun</td><td>Shoot Batch 3 — Testimoni</td><td>-</td><td><span class="tag tag-planned">Planned</span></td></tr>
+    <tr><td>29-30</td><td>Editing & finalisasi</td><td>-</td><td><span class="tag tag-planned">Planned</span></td></tr>
   </table>
 </div>
 
@@ -806,45 +732,43 @@ body {
     <div class="section-icon">✅</div>
     <div>
       <div class="section-title">Checklist Pra-Implementasi</div>
-      <div class="section-subtitle">Centang jika sudah selesai</div>
+      <div class="section-sub">Centang jika sudah selesai</div>
     </div>
   </div>
 
   <ul class="checklist">
-    <li><input type="checkbox" onchange=this.parentElement.classList.toggle('checked')> <span>Equipment Live Streaming: Mic Holyland + Tripod</span></li>
-    <li><input type="checkbox" onchange=this.parentElement.classList.toggle('checked')> <span>Moodboard Live: Kuning-Putih, gradient kuning top screen</span></li>
-    <li><input type="checkbox" onchange=this.parentElement.classList.toggle('checked')> <span>Tulisan di screen: No telepon + lokasi (center), cicilan (center bawah)</span></li>
-    <li><input type="checkbox" onchange=this.parentElement.classList.toggle('checked')> <span>Talent trial live: Rizza atau MADA — test dulu sebelum 24 Jun</span></li>
-    <li><input type="checkbox" onchange=this.parentElement.classList.toggle('checked')> <span>Non-paid promote ke rekanan perbankan (BNI, Mandiri, BTN)</span></li>
-    <li><input type="checkbox" onchange=this.parentElement.classList.toggle('checked')> <span>Banner DEM: Penataan strategis, tidak asal tempat</span></li>
-    <li><input type="checkbox" onchange=this.parentElement.classList.toggle('checked')> <span>Pricelist Fit ML: Tentukan metodologi "memaksa" dulu sebelum release</span></li>
+    <li><input type="checkbox" onchange="this.parentElement.classList.toggle('checked')"> <span>Equipment Live: Mic Holyland + Tripod</span></li>
+    <li><input type="checkbox" onchange="this.parentElement.classList.toggle('checked')> <span>Moodboard: Kuning-Putih, gradient kuning</span></li>
+    <li><input type="checkbox" onchange="this.parentElement.classList.toggle('checked')> <span>Talent trial: Rizza atau MADA</span></li>
+    <li><input type="checkbox" onchange="this.parentElement.classList.toggle('checked')> <span>Non-paid promote: BNI, Mandiri, BTN</span></li>
+    <li><input type="checkbox" onchange="this.parentElement.classList.toggle('checked')> <span>Banner DEM: Penataan strategis</span></li>
   </ul>
 </div>
 
-<!-- UNIT READY -->
+<!-- UNITS -->
 <div class="section">
   <div class="section-header">
     <div class="section-icon">🏠</div>
     <div>
       <div class="section-title">Unit Ready untuk Closing</div>
-      <div class="section-subtitle">3 unit siap dijual</div>
+      <div class="section-sub">3 unit siap dijual</div>
     </div>
   </div>
 
   <div class="unit-grid">
-    <div class="unit-card">
+    <div class="unit">
       <div class="unit-icon">🏡</div>
       <div class="unit-name">Grand Lembayung Indah</div>
       <div class="unit-loc">Kabuaran A9</div>
       <div class="unit-status">✅ Ready</div>
     </div>
-    <div class="unit-card">
+    <div class="unit">
       <div class="unit-icon">🏘️</div>
       <div class="unit-name">Rumah Readystock</div>
       <div class="unit-loc">Mustika Lembayung</div>
       <div class="unit-status">✅ Ready</div>
     </div>
-    <div class="unit-card">
+    <div class="unit">
       <div class="unit-icon">🏘️</div>
       <div class="unit-name">Rumah Readystock</div>
       <div class="unit-loc">Bhumi Saka Arum</div>
@@ -856,8 +780,8 @@ body {
 </div>
 
 <div class="footer">
-  <p>Marketing Plan Mustika Lembayung — Generated by TITAN AI</p>
-  <p>Per 22 Juni 2026 | Target Closing: 3 Unit</p>
+  Marketing Plan Mustika Lembayung — Generated by TITAN AI<br>
+  Per 22 Juni 2026 | Target Closing: 3 Unit
 </div>
 
 </body>
