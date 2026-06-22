@@ -3,134 +3,117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mustika Lembayung — Marketing Plan</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;510;590;600;700&display=swap" rel="stylesheet">
+<title>Marketing Plan — Mustika Lembayung</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg-primary: #08090a;
-  --bg-panel: #0f1011;
-  --bg-surface: #191a1b;
-  --bg-elevated: #28282c;
-  --text-primary: #f7f8f8;
-  --text-secondary: #d0d6e0;
-  --text-tertiary: #8a8f98;
-  --text-muted: #62666d;
-  --brand: #D4A843;
-  --brand-hover: #E8C45A;
-  --brand-dark: #B8860B;
-  --green: #10b981;
-  --red: #e74c3c;
-  --yellow: #f39c12;
-  --blue: #5dade2;
-  --border: rgba(255,255,255,0.08);
-  --border-subtle: rgba(255,255,255,0.05);
+  --bg: #0d1117;
+  --bg-card: #161b22;
+  --bg-hover: #1c2128;
+  --border: #30363d;
+  --border-light: #21262d;
+  --text: #e6edf3;
+  --text-secondary: #8b949e;
+  --text-muted: #484f58;
+  --accent: #58a6ff;
+  --green: #3fb950;
+  --red: #f85149;
+  --yellow: #d29922;
+  --purple: #bc8cff;
+  --orange: #f0883e;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.6;font-feature-settings:"cv01","ss03";-webkit-font-smoothing:antialiased}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
 
 /* HEADER */
-.header{background:var(--bg-panel);border-bottom:1px solid var(--border-subtle);padding:0;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
-.header-inner{max-width:1100px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;align-items:center;gap:10px}
-.logo-mark{width:32px;height:32px;background:linear-gradient(135deg,var(--brand),var(--brand-dark));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--bg-primary)}
-.logo-text{font-size:15px;font-weight:590;color:var(--text-primary);letter-spacing:-0.2px}
-.logo-sub{font-size:11px;color:var(--text-tertiary);font-weight:400}
-.badge{padding:5px 12px;border-radius:9999px;font-size:12px;font-weight:510;border:1px solid var(--border);color:var(--text-secondary)}
-.badge-accent{background:rgba(212,168,67,0.1);border-color:rgba(212,168,67,0.3);color:var(--brand)}
+.header{background:var(--bg-card);border-bottom:1px solid var(--border);padding:20px 0;position:sticky;top:0;z-index:100}
+.header-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.header h1{font-size:20px;font-weight:700;color:var(--text)}
+.header p{font-size:13px;color:var(--text-secondary);margin-top:2px}
+.header-badge{background:linear-gradient(135deg,#d29922,#b8860b);color:#000;padding:6px 16px;border-radius:6px;font-size:13px;font-weight:600}
 
 /* CONTAINER */
-.container{max-width:1100px;margin:0 auto;padding:32px 24px}
+.container{max-width:1100px;margin:0 auto;padding:24px}
 
-/* KPI */
-.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:28px}
-.kpi{background:var(--bg-panel);border:1px solid var(--border-subtle);border-radius:8px;padding:20px;position:relative}
-.kpi::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--brand),var(--brand-dark));border-radius:8px 8px 0 0}
-.kpi.danger::before{background:linear-gradient(90deg,var(--red),#c0392b)}
-.kpi.success::before{background:linear-gradient(90deg,var(--green),#27ae60)}
-.kpi.warning::before{background:linear-gradient(90deg,var(--yellow),#e67e22)}
-.kpi-value{font-size:36px;font-weight:590;color:var(--brand);letter-spacing:-1px;line-height:1.1}
-.kpi.danger .kpi-value{color:var(--red)}
-.kpi.success .kpi-value{color:var(--green)}
-.kpi.warning .kpi-value{color:var(--yellow)}
-.kpi-label{font-size:13px;color:var(--text-tertiary);margin-top:4px;font-weight:400}
-.kpi-bar{height:3px;background:var(--border-subtle);border-radius:2px;margin-top:12px;overflow:hidden}
-.kpi-bar-fill{height:3px;border-radius:2px;background:linear-gradient(90deg,var(--brand),var(--brand-hover))}
-.kpi.danger .kpi-bar-fill{background:linear-gradient(90deg,var(--red),#ff6b6b)}
-.kpi.warning .kpi-bar-fill{background:linear-gradient(90deg,var(--yellow),#f0d68a)}
+/* STATS GRID */
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}
+.stat-card{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:20px}
+.stat-value{font-size:28px;font-weight:700;color:var(--accent)}
+.stat-label{font-size:13px;color:var(--text-secondary);margin-top:4px}
+.stat-card.green .stat-value{color:var(--green)}
+.stat-card.red .stat-value{color:var(--red)}
+.stat-card.yellow .stat-value{color:var(--yellow)}
 
 /* SECTION */
-.section{background:var(--bg-panel);border:1px solid var(--border-subtle);border-radius:8px;padding:24px;margin-bottom:16px}
-.section-header{display:flex;align-items:center;gap:10px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border-subtle)}
-.section-icon{width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:14px}
-.section-title{font-size:16px;font-weight:590;color:var(--text-primary);letter-spacing:-0.2px}
-.section-sub{font-size:12px;color:var(--text-tertiary);margin-top:1px}
+.section{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;margin-bottom:20px;overflow:hidden}
+.section-header{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px}
+.section-header h2{font-size:16px;font-weight:600}
+.section-header .icon{font-size:18px}
+.section-body{padding:20px}
 
-/* BATCH */
-.batch-label{font-size:11px;font-weight:510;color:var(--brand);text-transform:uppercase;letter-spacing:0.8px;margin:20px 0 10px;display:flex;align-items:center;gap:8px}
-.batch-label::after{content:'';flex:1;height:1px;background:var(--border-subtle)}
+/* TABLE */
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{background:var(--bg-hover);color:var(--text-secondary);padding:10px 14px;text-align:left;font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:0.5px;border-bottom:1px solid var(--border)}
+td{padding:10px 14px;border-bottom:1px solid var(--border-light);color:var(--text)}
+tr:hover td{background:var(--bg-hover)}
+td strong{color:var(--text)}
+
+/* TAGS */
+.tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600}
+.tag-green{background:rgba(63,185,80,0.15);color:var(--green)}
+.tag-red{background:rgba(248,81,73,0.15);color:var(--red)}
+.tag-yellow{background:rgba(210,153,34,0.15);color:var(--yellow)}
+.tag-blue{background:rgba(88,166,255,0.15);color:var(--accent)}
+.tag-purple{background:rgba(188,140,255,0.15);color:var(--purple)}
 
 /* CONTENT LIST */
 .content-list{list-style:none}
-.content-list li{padding:12px 14px;border:1px solid var(--border-subtle);border-radius:6px;margin-bottom:6px;font-size:13px;color:var(--text-secondary);display:flex;align-items:flex-start;gap:10px;background:rgba(255,255,255,0.01);transition:all 0.15s}
-.content-list li:hover{border-color:var(--border);background:rgba(255,255,255,0.02)}
-.num{width:20px;height:20px;background:linear-gradient(135deg,var(--brand),var(--brand-dark));border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:var(--bg-primary);flex-shrink:0;margin-top:1px}
+.content-list li{padding:12px 16px;border:1px solid var(--border-light);border-radius:6px;margin-bottom:8px;font-size:13px;display:flex;align-items:flex-start;gap:12px;background:rgba(255,255,255,0.01)}
+.content-list li:hover{border-color:var(--border);background:var(--bg-hover)}
+.content-list .num{width:24px;height:24px;background:linear-gradient(135deg,#d29922,#b8860b);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#000;flex-shrink:0}
+
+/* BATCH LABEL */
+.batch-label{font-size:12px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.5px;margin:20px 0 10px;display:flex;align-items:center;gap:8px}
+.batch-label::after{content:'';flex:1;height:1px;background:var(--border-light)}
 
 /* METHOD CARDS */
-.method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
-.method{background:rgba(255,255,255,0.01);border:1px solid var(--border-subtle);border-radius:8px;padding:18px;transition:all 0.15s}
-.method:hover{border-color:var(--border);background:rgba(255,255,255,0.02)}
-.method-num{font-size:10px;font-weight:510;color:var(--brand);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:8px}
-.method-title{font-size:15px;font-weight:590;color:var(--text-primary);margin-bottom:6px;letter-spacing:-0.2px}
-.method-desc{font-size:12px;color:var(--text-tertiary);line-height:1.5;margin-bottom:10px}
-.method-list{list-style:none;font-size:12px;color:var(--text-muted)}
-.method-list li{padding:3px 0;padding-left:14px;position:relative}
-.method-list li::before{content:'→';position:absolute;left:0;color:var(--brand);font-size:11px}
-
-/* CALENDAR */
-.cal-table{width:100%;border-collapse:collapse;font-size:13px}
-.cal-table th{background:var(--bg-surface);color:var(--text-tertiary);padding:8px 12px;text-align:left;font-weight:510;font-size:11px;text-transform:uppercase;letter-spacing:0.5px;border-bottom:1px solid var(--border)}
-.cal-table td{padding:10px 12px;border-bottom:1px solid var(--border-subtle);color:var(--text-secondary)}
-.cal-table tr:hover td{background:rgba(255,255,255,0.01)}
-.tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:510}
-.tag-ready{background:rgba(16,185,129,0.1);color:var(--green);border:1px solid rgba(16,185,129,0.25)}
-.tag-blocked{background:rgba(231,76,60,0.1);color:var(--red);border:1px solid rgba(231,76,60,0.25)}
-.tag-planned{background:rgba(93,173,226,0.1);color:var(--blue);border:1px solid rgba(93,173,226,0.25)}
+.method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.method-card{background:rgba(255,255,255,0.01);border:1px solid var(--border);border-radius:8px;padding:20px}
+.method-card:hover{border-color:var(--accent)}
+.method-num{font-size:11px;font-weight:600;color:var(--yellow);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px}
+.method-title{font-size:15px;font-weight:600;margin-bottom:6px}
+.method-desc{font-size:13px;color:var(--text-secondary);line-height:1.5;margin-bottom:12px}
+.method-list{list-style:none;font-size:12px;color:var(--text-secondary)}
+.method-list li{padding:4px 0;padding-left:16px;position:relative}
+.method-list li::before{content:'→';position:absolute;left:0;color:var(--yellow)}
 
 /* CHECKLIST */
 .checklist{list-style:none}
-.checklist li{padding:10px 12px;border:1px solid var(--border-subtle);border-radius:6px;margin-bottom:4px;font-size:13px;color:var(--text-secondary);display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.01);cursor:pointer;transition:all 0.15s}
+.checklist li{padding:10px 14px;border:1px solid var(--border-light);border-radius:6px;margin-bottom:6px;font-size:13px;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.01);cursor:pointer}
 .checklist li:hover{border-color:var(--border)}
-.checklist input[type="checkbox"]{width:16px;height:16px;accent-color:var(--brand);cursor:pointer;flex-shrink:0}
+.checklist input[type="checkbox"]{width:16px;height:16px;accent-color:var(--green);cursor:pointer}
 .checklist li.checked{opacity:0.4;text-decoration:line-through}
 
-/* UNITS */
-.unit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
-.unit{background:rgba(255,255,255,0.01);border:1px solid var(--border-subtle);border-radius:8px;padding:16px;text-align:center;transition:all 0.15s}
-.unit:hover{border-color:var(--green)}
-.unit-icon{font-size:24px;margin-bottom:6px}
-.unit-name{font-size:13px;font-weight:510;color:var(--text-primary)}
-.unit-loc{font-size:11px;color:var(--text-tertiary);margin-top:2px}
-.unit-status{display:inline-block;margin-top:8px;padding:3px 10px;border-radius:4px;font-size:11px;font-weight:510;background:rgba(16,185,129,0.1);color:var(--green);border:1px solid rgba(16,185,129,0.25)}
-
-/* STATUS TABLE */
-.status-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:12px}
-.status-table th{background:var(--bg-surface);color:var(--text-tertiary);padding:8px 12px;text-align:left;font-weight:510;font-size:11px;text-transform:uppercase;letter-spacing:0.5px;border-bottom:1px solid var(--border)}
-.status-table td{padding:10px 12px;border-bottom:1px solid var(--border-subtle);color:var(--text-secondary)}
-.status-table tr:hover td{background:rgba(255,255,255,0.01)}
+/* UNIT CARDS */
+.unit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.unit-card{background:rgba(255,255,255,0.01);border:1px solid var(--border);border-radius:8px;padding:18px;text-align:center}
+.unit-card:hover{border-color:var(--green)}
+.unit-icon{font-size:28px;margin-bottom:8px}
+.unit-name{font-size:14px;font-weight:600}
+.unit-loc{font-size:12px;color:var(--text-secondary);margin-top:4px}
+.unit-status{display:inline-block;margin-top:10px;padding:4px 12px;border-radius:4px;font-size:11px;font-weight:600;background:rgba(63,185,80,0.15);color:var(--green)}
 
 /* FOOTER */
-.footer{text-align:center;padding:24px;color:var(--text-muted);font-size:12px;border-top:1px solid var(--border-subtle);margin-top:24px}
+.footer{text-align:center;padding:24px;color:var(--text-muted);font-size:12px;border-top:1px solid var(--border);margin-top:24px}
 
 /* RESPONSIVE */
 @media(max-width:768px){
-  .kpi-grid{grid-template-columns:repeat(2,1fr)}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
   .method-grid{grid-template-columns:1fr}
   .unit-grid{grid-template-columns:1fr}
-  .container{padding:20px 16px}
-  .header-inner{padding:12px 16px}
 }
 @media(max-width:480px){
-  .kpi-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -138,139 +121,126 @@ body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg-
 
 <div class="header">
   <div class="header-inner">
-    <div class="logo">
-      <div class="logo-mark">ML</div>
-      <div>
-        <div class="logo-text">Mustika Lembayung</div>
-        <div class="logo-sub">Marketing Plan — Juni 2026</div>
-      </div>
+    <div>
+      <h1>📋 Marketing Plan — Mustika Lembayung</h1>
+      <p>Periode: 22 Juni — 30 Juni 2026</p>
     </div>
-    <div class="badge badge-accent">🎯 Target Closing: 3 Unit</div>
+    <div class="header-badge">🎯 Target Closing: 3 Unit</div>
   </div>
 </div>
 
 <div class="container">
 
-<!-- KPI -->
-<div class="kpi-grid">
-  <div class="kpi">
-    <div class="kpi-value">7/20</div>
-    <div class="kpi-label">Konten Terbuat</div>
-    <div class="kpi-bar"><div class="kpi-bar-fill" style="width:35%"></div></div>
+<!-- STATS -->
+<div class="stats-grid">
+  <div class="stat-card">
+    <div class="stat-value">7/20</div>
+    <div class="stat-label">Konten Terbuat</div>
   </div>
-  <div class="kpi danger">
-    <div class="kpi-value">13</div>
-    <div class="kpi-label">Konten Belum</div>
-    <div class="kpi-bar"><div class="kpi-bar-fill" style="width:65%"></div></div>
+  <div class="stat-card red">
+    <div class="stat-value">13</div>
+    <div class="stat-label">Konten Belum</div>
   </div>
-  <div class="kpi success">
-    <div class="kpi-value">3</div>
-    <div class="kpi-label">Target Closing</div>
-    <div class="kpi-bar"><div class="kpi-bar-fill" style="width:100%"></div></div>
+  <div class="stat-card green">
+    <div class="stat-value">3</div>
+    <div class="stat-label">Target Closing</div>
   </div>
-  <div class="kpi warning">
-    <div class="kpi-value">18%</div>
-    <div class="kpi-label">Implementasi KPI</div>
-    <div class="kpi-bar"><div class="kpi-bar-fill" style="width:18%"></div></div>
+  <div class="stat-card yellow">
+    <div class="stat-value">18%</div>
+    <div class="stat-label">Implementasi KPI</div>
   </div>
 </div>
 
 <!-- KONTEN SUDAH -->
 <div class="section">
   <div class="section-header">
-    <div class="section-icon">✅</div>
-    <div>
-      <div class="section-title">Konten Sudah Terbuat (7)</div>
-      <div class="section-sub">Per 22 Juni 2026</div>
-    </div>
+    <span class="icon">✅</span>
+    <h2>Konten Sudah Terbuat (7)</h2>
   </div>
-  <table class="status-table">
-    <tr><th>#</th><th>Jenis</th><th>Kategori</th></tr>
-    <tr><td>1</td><td>Engagement</td><td><span class="tag tag-planned">Engagement</span></td></tr>
-    <tr><td>2</td><td>Engagement</td><td><span class="tag tag-planned">Engagement</span></td></tr>
-    <tr><td>3</td><td>Trend/Soft Selling</td><td><span class="tag tag-ready">Soft Selling</span></td></tr>
-    <tr><td>4</td><td>Trend/Soft Selling</td><td><span class="tag tag-ready">Soft Selling</span></td></tr>
-    <tr><td>5</td><td>Trend/Soft Selling</td><td><span class="tag tag-ready">Soft Selling</span></td></tr>
-    <tr><td>6</td><td>Hard Selling</td><td><span class="tag tag-blocked">Hard Selling</span></td></tr>
-    <tr><td>7</td><td>Tour House</td><td><span class="tag tag-ready">Tour</span></td></tr>
-  </table>
+  <div class="section-body">
+    <table>
+      <tr><th>#</th><th>Jenis</th><th>Kategori</th></tr>
+      <tr><td>1</td><td>Engagement</td><td><span class="tag tag-blue">Engagement</span></td></tr>
+      <tr><td>2</td><td>Engagement</td><td><span class="tag tag-blue">Engagement</span></td></tr>
+      <tr><td>3</td><td>Trend/Soft Selling</td><td><span class="tag tag-yellow">Soft Selling</span></td></tr>
+      <tr><td>4</td><td>Trend/Soft Selling</td><td><span class="tag tag-yellow">Soft Selling</span></td></tr>
+      <tr><td>5</td><td>Trend/Soft Selling</td><td><span class="tag tag-yellow">Soft Selling</span></td></tr>
+      <tr><td>6</td><td>Hard Selling</td><td><span class="tag tag-red">Hard Selling</span></td></tr>
+      <tr><td>7</td><td>Tour House</td><td><span class="tag tag-green">Tour</span></td></tr>
+    </table>
+  </div>
 </div>
 
 <!-- KONTEN BELUM -->
 <div class="section">
   <div class="section-header">
-    <div class="section-icon">🎬</div>
-    <div>
-      <div class="section-title">13 Konten Belum — Rencana Shooting</div>
-      <div class="section-sub">Target selesai editing: 30 Juni 2026</div>
-    </div>
+    <span class="icon">🎬</span>
+    <h2>13 Konten Belum — Rencana Shooting</h2>
   </div>
-
-  <div class="batch-label">Batch 1 — Lokasi & Akses</div>
-  <ul class="content-list">
-    <li><span class="num">1</span>Shoot jalan ke Mustika Lembayung Sumbersuko</li>
-    <li><span class="num">2</span>Lokasi ML ke tempat terkenal (Puskesmas, Wisata, Kantor Keamanan)</li>
-    <li><span class="num">3</span>Mengapa ML? — Lokasi real padat pemukiman, akses jalan beraspal. Komen: "Spill lokasinya"</li>
-    <li><span class="num">4</span>Mengapa ML? — Keunggulan kawasan Marketing Gallery</li>
-    <li><span class="num">5</span>Konten konsep open space di Mustika Lembayung</li>
-  </ul>
-
-  <div class="batch-label">Batch 2 — Interior & Edukasi</div>
-  <ul class="content-list">
-    <li><span class="num">6</span>Open space → komen negatif "Sumpek, gak ada privasi" → jawab: open space diminati + taman = ruang tamu outdoor</li>
-    <li><span class="num">7</span>Spill material (Bata ringan, merk cat, cat pelapis)</li>
-    <li><span class="num">8</span>Rumah subsidi rata-rata 2.8-3m vs ML 4 meter</li>
-    <li><span class="num">9</span>Drop ceiling atap + Meja ala bar</li>
-  </ul>
-
-  <div class="batch-label">Batch 3 — Testimoni & Spesifikasi</div>
-  <ul class="content-list">
-    <li><span class="num">10</span>Tukang/Pemborong (Selo) bahas kualitas bangunan ML</li>
-    <li><span class="num">11</span>Komen negatif "Bata ringan gak awet" → jawab kelebihan + highlight rumah komersial juga pakai</li>
-    <li><span class="num">12</span>Kedalaman septictank</li>
-    <li><span class="num">13</span>Akses jalan + Pengawasan struktur bangunan di ML</li>
-  </ul>
+  <div class="section-body">
+    <div class="batch-label">Batch 1 — Lokasi & Akses</div>
+    <ul class="content-list">
+      <li><span class="num">1</span>Shoot jalan ke Mustika Lembayung Sumbersuko</li>
+      <li><span class="num">2</span>Lokasi ML ke tempat terkenal (Puskesmas, Wisata, Kantor Keamanan)</li>
+      <li><span class="num">3</span>Mengapa ML? — Lokasi real padat pemukiman, akses jalan beraspal. Komen: "Spill lokasinya"</li>
+      <li><span class="num">4</span>Mengapa ML? — Keunggulan kawasan Marketing Gallery</li>
+      <li><span class="num">5</span>Konten konsep open space di Mustika Lembayung</li>
+    </ul>
+    <div class="batch-label">Batch 2 — Interior & Edukasi</div>
+    <ul class="content-list">
+      <li><span class="num">6</span>Open space → komen negatif "Sumpek, gak ada privasi" → jawab: open space diminati + taman = ruang tamu outdoor</li>
+      <li><span class="num">7</span>Spill material (Bata ringan, merk cat, cat pelapis)</li>
+      <li><span class="num">8</span>Rumah subsidi rata-rata 2.8-3m vs ML 4 meter</li>
+      <li><span class="num">9</span>Drop ceiling atap + Meja ala bar</li>
+    </ul>
+    <div class="batch-label">Batch 3 — Testimoni & Spesifikasi</div>
+    <ul class="content-list">
+      <li><span class="num">10</span>Tukang/Pemborong (Selo) bahas kualitas bangunan ML</li>
+      <li><span class="num">11</span>Komen negatif "Bata ringan gak awet" → jawab kelebihan + highlight rumah komersial juga pakai</li>
+      <li><span class="num">12</span>Kedalaman septictank</li>
+      <li><span class="num">13</span>Akses jalan + Pengawasan struktur bangunan di ML</li>
+    </ul>
+  </div>
 </div>
 
 <!-- METODE PENJUALAN -->
 <div class="section">
   <div class="section-header">
-    <div class="section-icon">🎯</div>
-    <div>
-      <div class="section-title">3 Metode Penjualan "Memaksa"</div>
-      <div class="section-sub">Teknik closing untuk konsumen yang ragu</div>
-    </div>
+    <span class="icon">🎯</span>
+    <h2>3 Metode Penjualan "Memaksa"</h2>
   </div>
-  <div class="method-grid">
-    <div class="method">
-      <div class="method-num">Metode 1</div>
-      <div class="method-title">Total Utility & TCO</div>
-      <div class="method-desc">Jual "Biaya Total Siap Huni", bukan harga rumah.</div>
-      <ul class="method-list">
-        <li>Harga murah = Hidden Cost</li>
-        <li>Tanpa dapur & tembok = CapEx tambahan</li>
-        <li>Ubah perbandingan jadi angka riil</li>
-      </ul>
-    </div>
-    <div class="method">
-      <div class="method-num">Metode 2</div>
-      <div class="method-title">Scarcity & FOMO</div>
-      <div class="method-desc">Ciptakan kelangkaan berbasis regulasi kuota pemerintah.</div>
-      <ul class="method-list">
-        <li>Kuota subsidi terbatas per tahun</li>
-        <li>"Sisa 2 unit blok siap huni"</li>
-        <li>Tunda = kehilangan hak subsidi</li>
-      </ul>
-    </div>
-    <div class="method">
-      <div class="method-num">Metode 3</div>
-      <div class="method-title">Menghilangkan Kekhawatiran</div>
-      <div class="method-desc">Hilangkan ketakutan: KPR ditolak & administrasi rumit.</div>
-      <ul class="method-list">
-        <li>Jaminan asistensi KPR penuh</li>
-        <li>Booking fee fleksibel/diangsur</li>
-        <li>Tim pemberkasan urus semua berkas</li>
-      </ul>
+  <div class="section-body">
+    <div class="method-grid">
+      <div class="method-card">
+        <div class="method-num">Metode 1</div>
+        <div class="method-title">Total Utility & TCO</div>
+        <div class="method-desc">Jual "Biaya Total Siap Huni", bukan harga rumah.</div>
+        <ul class="method-list">
+          <li>Harga murah = Hidden Cost</li>
+          <li>Tanpa dapur & tembok = CapEx tambahan</li>
+          <li>Ubah perbandingan jadi angka riil</li>
+        </ul>
+      </div>
+      <div class="method-card">
+        <div class="method-num">Metode 2</div>
+        <div class="method-title">Scarcity & FOMO</div>
+        <div class="method-desc">Ciptakan kelangkaan berbasis regulasi kuota pemerintah.</div>
+        <ul class="method-list">
+          <li>Kuota subsidi terbatas per tahun</li>
+          <li>"Sisa 2 unit blok siap huni"</li>
+          <li>Tunda = kehilangan hak subsidi</li>
+        </ul>
+      </div>
+      <div class="method-card">
+        <div class="method-num">Metode 3</div>
+        <div class="method-title">Menghilangkan Kekhawatiran</div>
+        <div class="method-desc">Hilangkan ketakutan: KPR ditolak & administrasi rumit.</div>
+        <ul class="method-list">
+          <li>Jaminan asistensi KPR penuh</li>
+          <li>Booking fee fleksibel/diangsur</li>
+          <li>Tim pemberkasan urus semua berkas</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
@@ -278,110 +248,105 @@ body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg-
 <!-- KALENDER -->
 <div class="section">
   <div class="section-header">
-    <div class="section-icon">📅</div>
-    <div>
-      <div class="section-title">Kalender Implementasi</div>
-      <div class="section-sub">24 — 30 Juni 2026</div>
-    </div>
+    <span class="icon">📅</span>
+    <h2>Kalender Implementasi — 24 s/d 30 Juni</h2>
   </div>
-  <table class="cal-table">
-    <tr><th>Tanggal</th><th>Aktivitas</th><th>PIC</th><th>Status</th></tr>
-    <tr><td>24 Jun</td><td>Live Streaming "Mulai aja dulu"</td><td>Rizza/Mada</td><td><span class="tag tag-ready">Ready</span></td></tr>
-    <tr><td>24 Jun</td><td>Follow up user survey</td><td>Mada</td><td><span class="tag tag-ready">Ready</span></td></tr>
-    <tr><td>24 Jun</td><td>Canvassing pabrik</td><td>Rizza</td><td><span class="tag tag-blocked">Blocked</span></td></tr>
-    <tr><td>25 Jun</td><td>Shoot Batch 1 — Lokasi</td><td>-</td><td><span class="tag tag-planned">Planned</span></td></tr>
-    <tr><td>26 Jun</td><td>Shoot Batch 2 — Interior</td><td>-</td><td><span class="tag tag-planned">Planned</span></td></tr>
-    <tr><td>27 Jun</td><td>Contact person di Linktree</td><td>Rizza</td><td><span class="tag tag-planned">Planned</span></td></tr>
-    <tr><td>28 Jun</td><td>Shoot Batch 3 — Testimoni</td><td>-</td><td><span class="tag tag-planned">Planned</span></td></tr>
-    <tr><td>29-30</td><td>Editing & finalisasi</td><td>-</td><td><span class="tag tag-planned">Planned</span></td></tr>
-  </table>
+  <div class="section-body" style="padding:0">
+    <table>
+      <tr><th>Tanggal</th><th>Aktivitas</th><th>PIC</th><th>Status</th></tr>
+      <tr><td>24 Jun</td><td>Live Streaming "Mulai aja dulu"</td><td>Rizza/Mada</td><td><span class="tag tag-green">Ready</span></td></tr>
+      <tr><td>24 Jun</td><td>Follow up user survey</td><td>Mada</td><td><span class="tag tag-green">Ready</span></td></tr>
+      <tr><td>24 Jun</td><td>Canvassing pabrik</td><td>Rizza</td><td><span class="tag tag-red">Blocked</span></td></tr>
+      <tr><td>25 Jun</td><td>Shoot Batch 1 — Lokasi</td><td>-</td><td><span class="tag tag-blue">Planned</span></td></tr>
+      <tr><td>26 Jun</td><td>Shoot Batch 2 — Interior</td><td>-</td><td><span class="tag tag-blue">Planned</span></td></tr>
+      <tr><td>27 Jun</td><td>Contact person di Linktree</td><td>Rizza</td><td><span class="tag tag-blue">Planned</span></td></tr>
+      <tr><td>28 Jun</td><td>Shoot Batch 3 — Testimoni</td><td>-</td><td><span class="tag tag-blue">Planned</span></td></tr>
+      <tr><td>29-30</td><td>Editing & finalisasi</td><td>-</td><td><span class="tag tag-blue">Planned</span></td></tr>
+    </table>
+  </div>
 </div>
 
 <!-- CHECKLIST -->
 <div class="section">
   <div class="section-header">
-    <div class="section-icon">📋</div>
-    <div>
-      <div class="section-title">Checklist Pra-Implementasi</div>
-      <div class="section-sub">Centang jika sudah selesai</div>
-    </div>
+    <span class="icon">📋</span>
+    <h2>Checklist Pra-Implementasi</h2>
   </div>
-  <ul class="checklist">
-    <li><input type="checkbox" onchange="this.parentElement.classList.toggle('checked')"> <span>Equipment Live: Mic Holyland + Tripod</span></li>
-    <li><input type="checkbox" onchange="this.parentElement.classList.toggle('checked')"> <span>Moodboard: Kuning-Putih, gradient kuning top screen</span></li>
-    <li><input type="checkbox" onchange="this.parentElement.classList.toggle('checked')"> <span>Tulisan screen: No telepon + lokasi (center), cicilan (center bawah)</span></li>
-    <li><input type="checkbox" onchange="this.parentElement.classList.toggle('checked')"> <span>Talent trial: Rizza atau MADA</span></li>
-    <li><input type="checkbox" onchange="this.parentElement.classList.toggle('checked')"> <span>Non-paid promote: BNI, Mandiri, BTN</span></li>
-    <li><input type="checkbox" onchange="this.parentElement.classList.toggle('checked')"> <span>Banner DEM: Penataan strategis</span></li>
-    <li><input type="checkbox" onchange="this.parentElement.classList.toggle('checked')"> <span>Pricelist Fit ML: Tentukan metodologi dulu</span></li>
-  </ul>
-</div>
-
-<!-- UNIT READY -->
-<div class="section">
-  <div class="section-header">
-    <div class="section-icon">🏠</div>
-    <div>
-      <div class="section-title">Unit Ready untuk Closing</div>
-      <div class="section-sub">3 unit siap dijual</div>
-    </div>
-  </div>
-  <div class="unit-grid">
-    <div class="unit">
-      <div class="unit-icon">🏡</div>
-      <div class="unit-name">Grand Lembayung Indah</div>
-      <div class="unit-loc">Kabuaran A9</div>
-      <div class="unit-status">✅ Ready</div>
-    </div>
-    <div class="unit">
-      <div class="unit-icon">🏘️</div>
-      <div class="unit-name">Rumah Readystock</div>
-      <div class="unit-loc">Mustika Lembayung</div>
-      <div class="unit-status">✅ Ready</div>
-    </div>
-    <div class="unit">
-      <div class="unit-icon">🏘️</div>
-      <div class="unit-name">Rumah Readystock</div>
-      <div class="unit-loc">Bhumi Saka Arum</div>
-      <div class="unit-status">✅ Ready</div>
-    </div>
+  <div class="section-body">
+    <ul class="checklist">
+      <li><input type="checkbox" onchange="this.parentElement.classList.toggle('checked')"> <span>Equipment Live: Mic Holyland + Tripod</span></li>
+      <li><input type="checkbox" onchange="this.parentElement.classList.toggle('checked')"> <span>Moodboard: Kuning-Putih, gradient kuning top screen</span></li>
+      <li><input type="checkbox" onchange="this.parentElement.classList.toggle('checked')"> <span>Tulisan screen: No telepon + lokasi (center), cicilan (center bawah)</span></li>
+      <li><input type="checkbox" onchange="this.parentElement.classList.toggle('checked')"> <span>Talent trial: Rizza atau MADA</span></li>
+      <li><input type="checkbox" onchange="this.parentElement.classList.toggle('checked')"> <span>Non-paid promote: BNI, Mandiri, BTN</span></li>
+      <li><input type="checkbox" onchange="this.parentElement.classList.toggle('checked')"> <span>Banner DEM: Penataan strategis</span></li>
+      <li><input type="checkbox" onchange="this.parentElement.classList.toggle('checked')"> <span>Pricelist Fit ML: Tentukan metodologi dulu</span></li>
+    </ul>
   </div>
 </div>
 
 <!-- BANNER & MEDSOS -->
 <div class="section">
   <div class="section-header">
-    <div class="section-icon">📢</div>
-    <div>
-      <div class="section-title">Banner & Media Sosial</div>
-      <div class="section-sub">Action items untuk awareness</div>
-    </div>
+    <span class="icon">📢</span>
+    <h2>Banner & Media Sosial</h2>
   </div>
-  <ul class="content-list">
-    <li><span class="num">1</span>Banner DEM — Penataan strategis, tidak asal tempat</li>
-    <li><span class="num">2</span>Penambahan contact person di Linktree (no pusat 2016) — Max 27 Juni, PIC: Rizza</li>
-    <li><span class="num">3</span>Akun Medsos Management — SOP SMM, PIC: Rizza</li>
-    <li><span class="num">4</span>Live Streaming "Mulai aja dulu" — Rabu 24 Juni, ref: Lab Persada</li>
-    <li><span class="num">5</span>Equipment Live: Mic Holyland + Tripod</li>
-    <li><span class="num">6</span>Moodboard: Kuning-Putih, gradient kuning top screen</li>
-    <li><span class="num">7</span>Talent trial: Rizza / Mada</li>
-  </ul>
+  <div class="section-body">
+    <ul class="content-list">
+      <li><span class="num">1</span>Banner DEM — Penataan strategis, tidak asal tempat</li>
+      <li><span class="num">2</span>Penambahan contact person di Linktree (no pusat 2016) — Max 27 Juni, PIC: Rizza</li>
+      <li><span class="num">3</span>Akun Medsos Management — SOP SMM, PIC: Rizza</li>
+      <li><span class="num">4</span>Live Streaming "Mulai aja dulu" — Rabu 24 Juni, ref: Lab Persada</li>
+      <li><span class="num">5</span>Equipment Live: Mic Holyland + Tripod</li>
+      <li><span class="num">6</span>Moodboard: Kuning-Putih, gradient kuning top screen</li>
+      <li><span class="num">7</span>Talent trial: Rizza / Mada</li>
+    </ul>
+  </div>
 </div>
 
-<!-- FOLLOW UP & CANVASSING -->
+<!-- FOLLOW UP -->
 <div class="section">
   <div class="section-header">
-    <div class="section-icon">📞</div>
-    <div>
-      <div class="section-title">Follow Up & Canvassing</div>
-      <div class="section-sub">Rabu 24 Juni 2026</div>
+    <span class="icon">📞</span>
+    <h2>Follow Up & Canvassing</h2>
+  </div>
+  <div class="section-body">
+    <ul class="content-list">
+      <li><span class="num">1</span>Follow up ulang user yang pernah survey lokasi — PIC: Mada</li>
+      <li><span class="num">2</span>Canvassing pabrik — butuh creative producer, PIC: Rizza</li>
+      <li><span class="num">3</span>Non-paid promote ke rekanan perbankan (BNI, Mandiri, BTN)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- UNIT READY -->
+<div class="section">
+  <div class="section-header">
+    <span class="icon">🏠</span>
+    <h2>Unit Ready untuk Closing</h2>
+  </div>
+  <div class="section-body">
+    <div class="unit-grid">
+      <div class="unit-card">
+        <div class="unit-icon">🏡</div>
+        <div class="unit-name">Grand Lembayung Indah</div>
+        <div class="unit-loc">Kabuaran A9</div>
+        <div class="unit-status">✅ Ready</div>
+      </div>
+      <div class="unit-card">
+        <div class="unit-icon">🏘️</div>
+        <div class="unit-name">Rumah Readystock</div>
+        <div class="unit-loc">Mustika Lembayung</div>
+        <div class="unit-status">✅ Ready</div>
+      </div>
+      <div class="unit-card">
+        <div class="unit-icon">🏘️</div>
+        <div class="unit-name">Rumah Readystock</div>
+        <div class="unit-loc">Bhumi Saka Arum</div>
+        <div class="unit-status">✅ Ready</div>
+      </div>
     </div>
   </div>
-  <ul class="content-list">
-    <li><span class="num">1</span>Follow up ulang user yang pernah survey lokasi — PIC: Mada</li>
-    <li><span class="num">2</span>Canvassing pabrik — butuh creative producer, PIC: Rizza</li>
-    <li><span class="num">3</span>Non-paid promote ke rekanan perbankan (BNI, Mandiri, BTN)</li>
-  </ul>
 </div>
 
 </div>
